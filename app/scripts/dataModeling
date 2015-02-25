@@ -1,0 +1,30 @@
+user object {
+	username: '',
+	password:'',
+	isInstructor: boolean
+	upToDate: boolean,
+	assignments: [
+		{assignmentObject},
+		{assignmentObject},
+		{assignmentObject},
+		{assignmentObject},
+		{assignmentObject},
+	]
+}
+
+assignment object {
+	assignment: '',
+	gitLink: '',
+	onTime: boolean,
+	late: boolean,
+	missing: boolean
+	studentNotes: '',
+	teacherNotes: ''
+}
+
+1. When user logs in, it sends a get reqeust to server and compares usernamer/password to the array of objects to make sure they match on, then it lets them in.
+	1.1 If they are a student, it takes them to the student page where they can upload a github link and also comments on how their homework went.
+	1.2 If they are an instructor, it logs them into the instructor page where they can see a table of all the students. When the instructor logs in, it does a get request to pull the array of information about students down and it populates the list.
+		1.2.1 Clicking on a student takes the instructor to the students specific page where he/she can click on an assignment to make notes or see more detail. If the instructor makes a change on an assignment, the submit button does a post request to change the information in the data and push it to the server.
+
+
