@@ -9,17 +9,17 @@ angular.module('app', ['app.controllers', 'ui.router', 'app.services'])
 	.state('game', {
 		url: "/game",
 		templateUrl: "templates/game.html",
-		controller: "gameCtrl"
+		controller: ""
 	})
 	.state('leaderboard', {
 		url: "/leaderboard",
 		templateUrl: "templates/leaderboard.html",
-		controller: "leaderboardCtrl"
+		controller: ""
 	})
 	.state('settings', {
 		url: '/settings',
 		templateUrl: 'templates/settings.html',
-		controller: 'settingsCtrl'
+		controller: ''
 	});
 
 	$urlRouterProvider.otherwise("/home");
